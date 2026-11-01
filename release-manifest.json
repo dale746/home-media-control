@@ -1,0 +1,382 @@
+{
+  "format": 1,
+  "version": "0.1.0-dev",
+  "files": [
+    {
+      "path": ".github/workflows/checks.yml",
+      "sha256": "ab9fc012bd9a31b1801da91b9db2a8b2ff6f693d0de008f9a18f04ecabfb5ea6"
+    },
+    {
+      "path": ".gitignore",
+      "sha256": "ee3932efbcc1923f2798787a2dcda7e4dfe8fa4edf0db01bea4543ec94254936"
+    },
+    {
+      "path": "CONTRIBUTING.md",
+      "sha256": "178a0dce429432660034beebfd63c9fb0c8a6379b79f45ffce87df25005491eb"
+    },
+    {
+      "path": "docs/ARCHITECTURE.md",
+      "sha256": "70be58eeb61d69627523ade69f9007bbc7362380eb7cd72395217f511a7c77d7"
+    },
+    {
+      "path": "docs/QA-CHECKLIST.md",
+      "sha256": "1e8591bbf6cdef2a508bafe4d33a02027265e395a38fb521a7e5b7e7238aa58f"
+    },
+    {
+      "path": "docs/VERIFICATION.md",
+      "sha256": "fa168c7e6ed630eb410ea717a62ba0cdf5117ef82bca52a063c1b88ef8ea6a75"
+    },
+    {
+      "path": "LICENSE",
+      "sha256": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986"
+    },
+    {
+      "path": "NOTICE",
+      "sha256": "58f2a9b6e24b4653c7a7b07f4c89edb207db84060500d567ca8d1da75044ea00"
+    },
+    {
+      "path": "README.md",
+      "sha256": "a14b355b9a14731da7495373a0b1a7cb1f05cec719bc28f8c8fe49948c8516d9"
+    },
+    {
+      "path": "SECURITY.md",
+      "sha256": "0879a9bfb7862acef40ee4ec6aac001f4797db069de54741644da4a6555968a7"
+    },
+    {
+      "path": "source/appearance/hmc-cinema.css",
+      "sha256": "96377ed6681d9a516be7dbec16f02dc4c361c8f81e90942330c2b68d6fe68a76"
+    },
+    {
+      "path": "source/artwork-cache/artwork-cache.js",
+      "sha256": "cc27b3fde3040681db8a8ce3247b7df2a4112c7f4c9e60124538cdbe018831c3"
+    },
+    {
+      "path": "source/artwork-cache/test_artwork_cache.cjs",
+      "sha256": "502028d56884cf06b65cb1c901ac2ec5c516ba10365fc0c36e7bb0983e5da714"
+    },
+    {
+      "path": "source/media-hold/hold_service.py",
+      "sha256": "ee9428972f24c466bb8603648ea4c9c9761e248c556bd1ac60b771c779aed9c9"
+    },
+    {
+      "path": "source/netflix-layout/compact.css",
+      "sha256": "35bad2ca21de14e225d18a5a6519aec4e3a71d5e5cbaf2da172b6d756dbe4ebe"
+    },
+    {
+      "path": "source/netflix-layout/extra-links.json",
+      "sha256": "80cdbc4b7980de0cc2aa7e3356d74f50a01e9a0ac13f6c0e0ff0f7ced6a25034"
+    },
+    {
+      "path": "source/netflix-layout/hmc-navigation.js",
+      "sha256": "13615581fc3e8b3374d47f4935f51a74ef2736119867f93abd3a9cda58fab6da"
+    },
+    {
+      "path": "source/netflix-layout/test_family_links.cjs",
+      "sha256": "9cd354bb116d48441e6eab3f2948046379124ce4749c2d93d1e0e1b573fca385"
+    },
+    {
+      "path": "source/netflix-layout/test_library_browse.cjs",
+      "sha256": "97f4b2abee6a071f331462de5ff2d772ef0f203a7f0b99af2966779126e78c47"
+    },
+    {
+      "path": "source/netflix-layout/test_navigation_perf.cjs",
+      "sha256": "b19bad59000384ad01e402912cf833e0600f6331a6d82e4ca75f8bcc9de3b9ef"
+    },
+    {
+      "path": "source/pc-downloads/bulk_feed.py",
+      "sha256": "e6cd1b8aa8fb0eed0b9204554dc9838a255b10f7774d0c651d41d4f43d1f05a6"
+    },
+    {
+      "path": "source/pc-downloads/bulk_policy.py",
+      "sha256": "979d42081f84ecdf377fdd77448879bba9d70ae1c2a612f58ccb74a5de94067c"
+    },
+    {
+      "path": "source/pc-downloads/bulk_queue.py",
+      "sha256": "7a9b9bef5aff2eaf35f4d5565c4b7634e0ea28ad275682fefe4d029437be1308"
+    },
+    {
+      "path": "source/pc-downloads/bulk_scheduler.py",
+      "sha256": "aa3a8c3ffe3257ed09647afe18f503e65eae8c1e1db5c94128a70e7a7219ff63"
+    },
+    {
+      "path": "source/pc-downloads/collections_v2.py",
+      "sha256": "efba7ef38989cb9bdf794da30e5a21a8faa036b38f6f7b8671fd2990e0e110c8"
+    },
+    {
+      "path": "source/pc-downloads/control_state.py",
+      "sha256": "9b1f6b854cb3e4af8ba0a492bb17080c643b2c0fce939d5baaea885b6abcbd5d"
+    },
+    {
+      "path": "source/pc-downloads/failover_guard.py",
+      "sha256": "b5cca70f184cf2e5c81a95512cc32f886e8cefa42e6e421182e4d2dd3022e9ee"
+    },
+    {
+      "path": "source/pc-downloads/fast_copy.py",
+      "sha256": "55f70c928f1cef069e84926eeae0e0587925c020c768d6bed2e526fdb3540186"
+    },
+    {
+      "path": "source/pc-downloads/fresh_collection.py",
+      "sha256": "3138b77a8143db8fe59b958bac0afbf25762735c7fd8e4bcebce64f48b19306b"
+    },
+    {
+      "path": "source/pc-downloads/fresh_requests.py",
+      "sha256": "a462fd723b07cbdd6f95b96357814c71a2e2f15fcbaea5f071707821e6db8e6e"
+    },
+    {
+      "path": "source/pc-downloads/media_hold.py",
+      "sha256": "991b01b9a10fcbe894431e0579bfa06f99b941668b25128b84ff3445c92ea476"
+    },
+    {
+      "path": "source/pc-downloads/pc_cleanup.py",
+      "sha256": "f6b6f7f33ea9d6a2addf8325e3855051800da0b74179c248e579c7caab5e40f9"
+    },
+    {
+      "path": "source/pc-downloads/test_api_session.py",
+      "sha256": "9d0f904fa38897fd3918225e55c365c6490e03464a2aa3386d508a9e70a49775"
+    },
+    {
+      "path": "source/pc-downloads/test_bulk_admission.py",
+      "sha256": "0ae2a20eafea0d197978e8cfb9ca984eebc775fb5408894f30307cf53aba5a6d"
+    },
+    {
+      "path": "source/pc-downloads/test_collection_controls.py",
+      "sha256": "420b8af57fb7326da04895b6ce73b1fc5fb6db5b5cfcb14987b185a91af96eb0"
+    },
+    {
+      "path": "source/pc-downloads/test_fast_copy.py",
+      "sha256": "655125c294c9cb9fc6b6c433ccea7f69fc053f6b0c55d492cc6d8f41ac06ebbd"
+    },
+    {
+      "path": "source/pc-downloads/test_long_paths.py",
+      "sha256": "37d92dc6e67ade0f3ebfe05e80f701be8db55a0c5aa19b28ee92a9d1f8b4bbd3"
+    },
+    {
+      "path": "source/pc-downloads/test_manual_controls.py",
+      "sha256": "3a74221ec547107d48b587ce89450366adb037eda70d20decf8545c366fc44fd"
+    },
+    {
+      "path": "source/pc-downloads/test_owner_queue.py",
+      "sha256": "e9f8e15f9368440c786e01467f31b42168f9f7c91ca75679d6dd53386fb63245"
+    },
+    {
+      "path": "source/pc-downloads/test_pc_cleanup.py",
+      "sha256": "8617e9377625a35e4c4ff12c83a4bd208b677c555eb7cd08017383d4c6a3a493"
+    },
+    {
+      "path": "source/pc-downloads/test_queue_order.py",
+      "sha256": "5aed8e1ae877e8f63e2013bbcdb3a03235f9aef2d28201e21bac542141960cc6"
+    },
+    {
+      "path": "source/pc-downloads/test_worker_bootstrap.py",
+      "sha256": "2ad85d2aa09d75b39190bf36e74bf34dab62a00a29d43db40e9c91d63003b5e3"
+    },
+    {
+      "path": "source/pc-downloads/test_worker_recovery.py",
+      "sha256": "3d76e073d1162c6b5d9c06f12edc788d814eed1ef64b29f0dfbff0f5645353c8"
+    },
+    {
+      "path": "source/pc-downloads/tunnel_proxy.py",
+      "sha256": "3cbe476530afe461fa26c1e2561c897c8a2ecb2fd1a9fb96c3980da08d2d515a"
+    },
+    {
+      "path": "source/pc-downloads/windows_paths.py",
+      "sha256": "d73c200fe004a436228be872815492304911ccf8b46fc4d30b27e0c3c58d49dd"
+    },
+    {
+      "path": "source/pc-downloads/worker.py",
+      "sha256": "2518fa58847b86e84eadb8e323a488fdde0d961f8c57a6703cb3ed40ff5166b9"
+    },
+    {
+      "path": "source/projector-couch/test_shared_edges.cjs",
+      "sha256": "55d95ed270f3f100d4f7ffa38dbc0d225b038cba70f42b6c73a16e3916c6a5b2"
+    },
+    {
+      "path": "source/projector-couch/test_tv_couch.cjs",
+      "sha256": "b5d4d20114aae13e65127c819b8624738636b3ce9ef46d0e7318416776233ae4"
+    },
+    {
+      "path": "source/projector-couch/test_tv_couch_actions.cjs",
+      "sha256": "0688c5b2af44d410e1f40147d1a2cc7b30f1bca0b30e33497acb6113e8e3c7cf"
+    },
+    {
+      "path": "source/projector-couch/test_tv_couch_load.cjs",
+      "sha256": "f893565b78cf33502018eb7040b3b940200b55f436b513aa3d3ea744f25aedc2"
+    },
+    {
+      "path": "source/projector-couch/test_tv_playback_controls.cjs",
+      "sha256": "1ac115ef7e4c49caafc2639355f6c643c13f262de5df7d09dd8c5c1541d4d622"
+    },
+    {
+      "path": "source/projector-couch/test_tv_search_focus.cjs",
+      "sha256": "3aa3cfa230692e04769dc2148bb571de05ca344e5d1c4dce9cdeff23e85eab49"
+    },
+    {
+      "path": "source/projector-couch/tv-couch-actions.js",
+      "sha256": "4159bb454c2a66b513f766624e2d21afd739cf254fe6c85983cb232dbdaeae83"
+    },
+    {
+      "path": "source/projector-couch/tv-couch-load.js",
+      "sha256": "6ab4ea963faa77c9e97095669acd5ec732f2e57cd0b7765d7defb2f2f5a33e8e"
+    },
+    {
+      "path": "source/projector-couch/tv-couch.js",
+      "sha256": "0cf3fbafe5bb5f744448186db48ae1103fd405fcc1986173e1b233b7e678a46b"
+    },
+    {
+      "path": "source/projector-couch/tv-playback-controls.js",
+      "sha256": "6b5b720caa7a01fcd3e4e0aa886a56f66bced0c78b337c14f8c9464261bc5e18"
+    },
+    {
+      "path": "source/projector-couch/tv-search-focus.js",
+      "sha256": "b7bdcd372c1f8a5b946fbf611b162cafc644cf2ad750b9138e4b9add522e678d"
+    },
+    {
+      "path": "source/projector-input/projector-input.js",
+      "sha256": "7de2bee6b4bec586d999babac0b85ff7434feb6269fa094457bde6e5a96532bc"
+    },
+    {
+      "path": "source/projector-input/test_dashboard_modal_input.cjs",
+      "sha256": "ab5f0594be0793943cd11863809125e58f128f09a63992a9af3ef7d771b942d6"
+    },
+    {
+      "path": "source/projector-input/test_projector_input.cjs",
+      "sha256": "45fe3204300a0d081d088c3d3704872ddbc1ab9d1a712c45db77fc5412d19232"
+    },
+    {
+      "path": "source/status-dashboard/actions.py",
+      "sha256": "c5cbe76ad09fea79f461ace82a03987c79f29645951dd8ab4152366c45a246a2"
+    },
+    {
+      "path": "source/status-dashboard/dist/controls.css",
+      "sha256": "c4899889ab9ef230f84cd767b33ee5f951b3f99a8d68f168b7766497365ee5d6"
+    },
+    {
+      "path": "source/status-dashboard/dist/controls.js",
+      "sha256": "a92aa703296ce993e00bd7b75158694275c86b1487ec458970621d50c489839a"
+    },
+    {
+      "path": "source/status-dashboard/dist/index.html",
+      "sha256": "b2a88150e287399abe35f77ff637ae1fcafe5bdf0ac4d16f0c4d1d9e3f7ccd70"
+    },
+    {
+      "path": "source/status-dashboard/dist/projector-input.js",
+      "sha256": "0d5728c8d816b7ae4549a2a184b1d1d466180e7c0aaf2bbe21ed607a1310c142"
+    },
+    {
+      "path": "source/status-dashboard/pi_proxy.py",
+      "sha256": "c2295312a64e1383bbe9dd6558c9ac67c2f1d1e8b7120d1d802354dbaf89ca56"
+    },
+    {
+      "path": "source/status-dashboard/progress_model.py",
+      "sha256": "06923d520b0e09425eb4ddf33d0a3ec9c3f71d5fa83dba9d230584dbdda45c98"
+    },
+    {
+      "path": "source/status-dashboard/server.py",
+      "sha256": "3caa6de1d5d33e1c1cf8897f6e79f457e15c4045fb0a2f2c29a2326e2e6cf772"
+    },
+    {
+      "path": "source/status-dashboard/server_power.py",
+      "sha256": "366f4db58914dec7763196de4024c72a52710f119470e61e4136b707239210dd"
+    },
+    {
+      "path": "source/status-dashboard/supervisor.py",
+      "sha256": "0185f07850423cbb373cf9face95514575c5c500e34195c4a9c4146c3aa84f9c"
+    },
+    {
+      "path": "source/status-dashboard/test_controls.py",
+      "sha256": "053deb12bb3ef350c3635c5cfa36d4bc156a87891a28f38574874c436aa270f6"
+    },
+    {
+      "path": "source/status-dashboard/test_copy_observation.py",
+      "sha256": "14a209bd773759f3db756ec905f6a7427295d349b618362cee2c1a80ae2aeb8a"
+    },
+    {
+      "path": "source/status-dashboard/test_holding_selection.cjs",
+      "sha256": "24aaf92f12bf279a07ad62e2aab4618cccf4d1be87a94300c019a875ba9ad85c"
+    },
+    {
+      "path": "source/status-dashboard/test_pi_proxy.py",
+      "sha256": "2b39c7279305615df0704cfd68823afaff59a4dc77d279212da9d971786e4565"
+    },
+    {
+      "path": "source/status-dashboard/test_progress_model.py",
+      "sha256": "edceba4046a3811ed621b6a8e74c206f49fe2f7baa6b3b1798405cc0983ef313"
+    },
+    {
+      "path": "source/status-dashboard/test_runtime_bootstrap.py",
+      "sha256": "806fba93f7e69de48e2ebc8e89f52a4524d604b097b177c3b6f0cd548dc6974f"
+    },
+    {
+      "path": "source/status-dashboard/test_server_power.py",
+      "sha256": "3b9fd2d16e8b1d33e148f80796e81078e6b12ee5bc659d5362822a529ceb920f"
+    },
+    {
+      "path": "source/status-dashboard/test_server_power_ui.cjs",
+      "sha256": "b4318f1111e1b53aa9442cf01bbb8b7eb9a2873524bce361a764fc064ddb3c42"
+    },
+    {
+      "path": "source/status-dashboard/test_supervisor.py",
+      "sha256": "51f0075062a99069639ff6a97258e2d24e333a3cae27d338b6196510ac95caac"
+    },
+    {
+      "path": "source/status-dashboard/test_transfer_controls.cjs",
+      "sha256": "057adba16a4df944d4024501069a5e0c63a1077a36f7c5649598f4dcda259c97"
+    },
+    {
+      "path": "source/status-dashboard/test_transfer_rate.py",
+      "sha256": "a97ec65584c69c76c81089fdfe1803b39414a1370d0978882a9b27f027272dc3"
+    },
+    {
+      "path": "source/usability/hmc-browse.js",
+      "sha256": "e7d23296d49e0815d1a71e0a34d9a21a439e50a04b3f3228c7e7553b619a4742"
+    },
+    {
+      "path": "source/usability/test-back-navigation.cjs",
+      "sha256": "e440c8530a7cfed3f50e6600a7c8f8c32e39004c80bfe91d47032cdb157cac05"
+    },
+    {
+      "path": "source/usability/test-browse.cjs",
+      "sha256": "6815884facea60114e3a8e26a12842da28ab550a372211ea3a83071838ea0dc7"
+    },
+    {
+      "path": "source/usability/test-native-route-navigation.cjs",
+      "sha256": "d20370f71b098378c173986fc6c447302e53388f283112bcfe6b5ce23e15f67c"
+    },
+    {
+      "path": "source-manifest.json",
+      "sha256": "404488fc95559b66926793cde8968a8487599339c7008a50347f6c4438dfb5ab"
+    },
+    {
+      "path": "tools/build_web.py",
+      "sha256": "40895c91eb5af7a27cb8f531197454ca57cfc3a18f4b8f5fff1792929fa9b35f"
+    },
+    {
+      "path": "tools/check_release.py",
+      "sha256": "59df846b3f7029c5d7896f4753ae2bca14a20510cb0e4103a30fd4befd8c974c"
+    },
+    {
+      "path": "tools/install_web.py",
+      "sha256": "9a1d316a93a291e0e2f13f82ef8fa196ec23ba9e6517dacb4a477995d22e8a37"
+    },
+    {
+      "path": "tools/test_backend.py",
+      "sha256": "288490d5a8c870de82828112f6658a395977fb1cf68f94065977696909fbdb09"
+    },
+    {
+      "path": "tools/test_build_web.py",
+      "sha256": "4e24b764e6bad06b21732abb3873a3d33571bb63473736bcb02f37f7a8ec2e5a"
+    },
+    {
+      "path": "tools/test_check_release.py",
+      "sha256": "b06bdd3053f210bba312c8d6e248b95c1401ecba68b377c6b898aa2ff2d2f064"
+    },
+    {
+      "path": "tools/test_install_web.py",
+      "sha256": "41752af7ed4ec523e5f3c8d62c7f340f68b21dbd3b03a575e5ad3c071c09918f"
+    },
+    {
+      "path": "web-config.example.json",
+      "sha256": "8033a7dc817ec826c64d1a5b1fa915da684779a6290dd5b6e0f396fc9e9f688d"
+    }
+  ]
+}

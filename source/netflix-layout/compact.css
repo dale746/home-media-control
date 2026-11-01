@@ -1,0 +1,192 @@
+/* Compact browsing for Home Media Movies. The Custom Theme plugin supplies the skin. */
+/* Keep scrolling native. Do not promote every poster to its own GPU layer or
+   animate a zoom/shadow whenever a scrolling row passes the pointer. */
+html .card,html .cardBox,html .cardScalable,html .cardImageContainer,
+html .nf-cw-card,html .nf-cw-thumb {will-change:auto !important;}
+html .card,html .card .cardBox,html .card .cardScalable,html .card .cardImageContainer,
+html .cardText,html .nf-cw-card,html .nf-cw-thumb {transition:none !important;}
+html .cardBox {box-shadow:none !important;}
+html .card:hover,html .card:hover .cardBox,html .card:hover .cardScalable,
+html .nf-cw-card:hover {transform:none !important;box-shadow:none !important;}
+html .card:hover {z-index:auto !important;}
+html .card:hover .cardImageContainer {filter:none !important;}
+html .nf-hero-bg {animation:none !important;will-change:auto !important;}
+html .skinHeader,html .MuiAppBar-root,html .emby-scrollbuttons-button,
+html .nf-pop,html .ct-overlay {
+  backdrop-filter:none !important;-webkit-backdrop-filter:none !important;
+}
+html .skinHeader,html .MuiAppBar-root {transition:none !important;}
+html .nf-row-scroll,html .nf-cw-scroll,html .emby-scroller {
+  -webkit-overflow-scrolling:touch;
+}
+/* Keep the theme's backdrop tint behind the controls and posters. */
+#reactRoot main,.skinBody { position:relative; z-index:2; }
+html #reactRoot .mainDetailButtons .btnPlayTrailer:not(.hide) { display:inline-flex !important;align-items:center;justify-content:center;min-width:44px;min-height:44px;color:#fff !important; }
+.hmc-favourite-host { position:relative; }
+.hmc-favourite,.hmc-native-favourite {
+  position:absolute !important;top:8px !important;right:8px !important;bottom:auto !important;left:auto !important;
+  z-index:8 !important;width:42px !important;height:42px !important;min-width:42px !important;padding:0 !important;
+  display:flex !important;align-items:center;justify-content:center;border:1px solid #ffffff70 !important;border-radius:50% !important;
+  background:#111d !important;color:#fff !important;opacity:1 !important;cursor:pointer;font-size:29px;
+}
+.hmc-favourite[aria-pressed="true"],.hmc-native-favourite[data-isfavorite="true"] {color:#ff6470 !important;background:#300d13ee !important;}
+.hmc-favourite:focus-visible,.hmc-native-favourite:focus-visible {outline:3px solid #ffd45b !important;outline-offset:2px;}
+.card button.hmc-superseded-favourite {display:none !important;}
+.hmc-cw-wrap {position:relative;flex:0 0 auto;width:clamp(140px,14vw,210px);}
+.hmc-cw-wrap>.nf-cw-card {display:block;width:100% !important;}
+@media(max-width:600px){.hmc-cw-wrap{width:38vw;min-width:130px;}}
+/* English labels and clear contrast on the theme's white Play buttons. */
+html #reactRoot .mainDetailButtons .btnPlay,
+html #reactRoot .mainDetailButtons .btnPlay * { color:#111 !important; }
+html #reactRoot .mainDetailButtons .btnPlay { background:#fff !important; }
+html .mainDetailButtons .btnPlay::after { content:'Play' !important; color:#111 !important; }
+html .mainDetailButtons .btnResume::after { content:'Resume' !important; color:#111 !important; }
+html .mainDetailButtons .btnReplay::after { content:'Play again' !important; color:#111 !important; }
+html.hmc-nav-ready #reactRoot header .MuiToolbar-root {
+  display:flex; align-items:center; gap:12px; min-height:60px; padding:0 3.3%;
+}
+.hmc-native-nav,
+html.hmc-nav-ready #reactRoot header .MuiToolbar-root > .MuiStack-root { display:none !important; }
+.hmc-native-nav > :not(.hmc-brand) { display:none !important; }
+.hmc-brand { color:#fff !important; padding:8px 0 !important; font-size:18px !important; font-weight:800 !important; white-space:nowrap; }
+.hmc-brand .MuiButton-startIcon { display:none; }
+.hmc-main-nav { display:flex; align-items:center; gap:4px; flex:1 1 auto; min-width:0; }
+.hmc-nav-link,.hmc-nav-trigger,.hmc-tools-trigger {
+  display:inline-flex; align-items:center; justify-content:center; gap:6px;
+  min-height:42px; padding:0 12px; border:0; border-radius:6px; background:transparent;
+  color:#d4d4d8 !important; font:600 14px/1.2 "Segoe UI",Arial,sans-serif;
+  text-decoration:none !important; white-space:nowrap; cursor:pointer; box-sizing:border-box;
+}
+.hmc-nav-link:hover,.hmc-nav-trigger:hover,.hmc-tools-trigger:hover { color:#fff !important; background:#ffffff12; }
+.hmc-nav-link[aria-current="page"],.hmc-nav-trigger[aria-current="page"] { color:#fff !important; box-shadow:inset 0 -3px #e50914; }
+.hmc-main-nav :focus-visible,.hmc-menu a:focus,.hmc-menu a:focus-visible,.hmc-tools-trigger:focus-visible {
+  outline:3px solid #ffd45b !important; outline-offset:2px; background:#27272f !important; color:#fff !important;
+}
+.hmc-tools-trigger { width:38px; padding:0; font-size:24px; flex:none; }
+.hmc-menu {
+  position:fixed; z-index:1500; min-width:210px; max-width:calc(100vw - 24px); padding:7px;
+  border:1px solid #ffffff30; border-radius:10px; background:#19191f; color:#fff;
+  box-shadow:0 12px 36px #0009; overflow-y:auto; overscroll-behavior:contain;
+}
+.hmc-menu[hidden] { display:none !important; }
+.hmc-menu a { display:block; border-radius:6px; padding:12px 15px; min-height:44px; box-sizing:border-box;
+  font:600 14px/1.4 "Segoe UI",Arial,sans-serif; text-decoration:none; color:#f5f5f7 !important; }
+.hmc-menu a:hover { background:#ffffff12; }
+html.hmc-nav-ready #homeTab .section0,
+html.hmc-nav-ready .hmc-live-section { display:none !important; }
+html.hmc-nav-ready .hmc-original-search { display:none !important; }
+html.hmc-nav-ready #reactRoot header .MuiIconButton-root { padding:8px; }
+html.hmc-nav-ready #reactRoot header .MuiBox-root { flex-shrink:0; }
+/* Avoid a second oversized library tab strip above the film rows. */
+html.hmc-nav-ready #indexPage > .pageTabContent { margin-top:0; }
+.nf-hero .nf-hero-content { max-width:650px; }
+.nf-hero .nf-hero-overview { color:#eee !important; }
+.nf-hero .nf-hero-match { color:#ffe5a0 !important; }
+.nf-hero .nf-hero-dot:focus-visible { outline:3px solid #ffd45b !important; outline-offset:4px; }
+.nf-hero .nf-hero-mute { display:none !important; }
+.nf-hero .nf-hero-list { display:none !important; }
+.nf-hero .nf-hero-play { display:none !important; }
+.nf-hero .nf-hero-info { color:#fff !important; }
+.nf-hero .nf-hero-ctrl:focus-visible,.nf-hero a:focus-visible { outline:3px solid #ffd45b !important; outline-offset:3px; }
+/* Home rows use the same portrait artwork, title and year as the movie library. */
+.nf-genre-section .nf-card,.nf-cw-card {
+  flex:0 0 auto !important; width:clamp(140px,14vw,210px) !important; max-width:none !important;
+}
+.nf-genre-section .nf-card .cardScalable,.nf-cw-thumb {
+  aspect-ratio:2/3 !important; height:auto !important; padding-bottom:0 !important;
+  border-radius:8px !important; background-position:center !important; background-size:cover !important;
+}
+.nf-genre-section .nf-card .cardPadder { padding-bottom:150% !important; }
+.nf-genre-section .nf-card .cardImageContainer { background-position:center !important; background-size:cover !important; }
+.nf-cw-track,.nf-genre-section .itemsContainer { gap:12px !important; }
+.nf-cw-title,.nf-genre-section .cardText-first { color:#f5f5f7 !important; font-size:14px !important; font-weight:650 !important; text-align:center; }
+.hmc-card-year,.nf-genre-section .cardText-secondary { color:#b8b8c2 !important; font-size:12px !important; text-align:center; margin-top:3px; }
+.nf-cw-card:focus-visible { outline:3px solid #ffd45b; outline-offset:4px; border-radius:8px; }
+@media(max-width:1050px) {
+  html.hmc-nav-ready #reactRoot header .MuiToolbar-root { flex-wrap:wrap; gap:0 9px; padding-top:3px; padding-bottom:3px; }
+  .hmc-main-nav { order:10; flex:0 0 100%; width:100%; overflow-x:auto; scrollbar-width:none; gap:2px; }
+  .hmc-main-nav::-webkit-scrollbar { display:none; }
+  .hmc-nav-link,.hmc-nav-trigger { flex:1 0 auto; min-height:40px; padding:0 10px; }
+  .hmc-tools-trigger { min-height:40px; }
+}
+@media(max-width:600px) {
+  .hmc-brand { font-size:17px !important; }
+  .hmc-nav-link,.hmc-nav-trigger { font-size:13px; padding:0 8px; min-height:42px; }
+  .hmc-main-nav a[data-section="search"] { display:none; }
+  html.hmc-nav-ready .hmc-original-search { display:inline-flex !important; }
+  .hmc-main-nav { flex-wrap:nowrap; }
+  html.hmc-nav-ready #reactRoot header .MuiToolbar-root { padding-left:12px; padding-right:12px; }
+  .nf-hero { min-height:340px !important; max-height:460px; }
+  .nf-hero .nf-hero-title { font-size:clamp(23px,7vw,36px) !important; }
+  .nf-hero .nf-hero-overview { display:-webkit-box; -webkit-line-clamp:3; -webkit-box-orient:vertical; overflow:hidden; }
+  .nf-genre-section .nf-card,.nf-cw-card { width:38vw !important; min-width:130px; }
+}
+@media(prefers-reduced-motion:reduce) { .hmc-main-nav *, .nf-hero * { scroll-behavior:auto !important; animation:none !important; transition:none !important; } }
+/* Shared browsing controls in the legacy phone and TV clients. */
+html.hmc-nav-ready .skinHeader { height:auto !important; }
+html.hmc-nav-ready .skinHeader .headerTop { display:flex;align-items:center;gap:8px;padding:4px 3.3%;height:auto !important;min-height:60px;box-sizing:border-box; }
+html.hmc-nav-ready .skinHeader .headerLeft { flex:0 0 auto;min-width:0;order:0; }
+html.hmc-nav-ready .skinHeader .headerLeft .pageTitle,
+html.hmc-nav-ready .skinHeader .headerHomeButton,
+html.hmc-nav-ready .skinHeader .ct-settings-btn,
+html.hmc-nav-ready .skinHeader .headerTabs { display:none !important; }
+html.layout-mobile.hmc-nav-ready .pageWithAbsoluteTabs,
+html.layout-tv.hmc-nav-ready .pageWithAbsoluteTabs { padding-top:calc(var(--hmc-header-height,100px) + 8px) !important; }
+html.hmc-nav-ready .skinHeader .headerRight { order:3;flex:0 0 auto;margin-left:auto; }
+html.hmc-nav-ready .skinHeader .headerTop > .hmc-main-nav { order:1; }
+html.hmc-nav-ready .skinHeader .headerTop > .hmc-tools-trigger { order:2; }
+html.hmc-nav-ready .skinHeader .headerButton { width:44px;height:44px;margin:0;padding:10px;box-sizing:border-box; }
+html #reactRoot .libraryPage:not(.itemDetailPage):not(#indexPage),
+html.layout-tv .libraryPage:not(.itemDetailPage):not(#indexPage),
+html.layout-mobile .libraryPage:not(.itemDetailPage):not(#indexPage) { background:rgba(8,8,11,.94) !important; }
+.hmc-tv-card-wrap { position:relative;flex:0 0 auto;box-sizing:border-box;min-width:0; }
+.hmc-tv-card-wrap > button.card { width:100% !important;z-index:0 !important; }
+.hmc-tv-card-wrap > .hmc-favourite { top:8px !important;right:20px !important; }
+/* One quiet poster highlight for mouse, keyboard and remote; no double white border. */
+html .card:focus,html .card:focus-visible,
+html .card:focus .cardBox,html .card:focus-visible .cardBox,
+html .nf-cw-card:focus-visible { outline:0 !important;box-shadow:none !important; }
+html .card:focus .cardScalable,html .card:focus-visible .cardScalable,
+html .nf-cw-card:focus-visible .nf-cw-thumb {
+  outline:3px solid #ffd45b !important;outline-offset:-3px !important;
+}
+@media(hover:hover) {
+  html .card:hover .cardScalable,html .nf-cw-card:hover .nf-cw-thumb {
+    outline:3px solid #ffd45b !important;outline-offset:-3px !important;
+  }
+}
+@media(max-width:1050px) {
+  html.hmc-nav-ready .skinHeader .headerTop { flex-wrap:wrap;padding-left:12px;padding-right:12px; }
+  html.hmc-nav-ready .skinHeader .headerTop > .hmc-main-nav { order:10; }
+}
+@media(max-width:600px) {
+  .nf-hero { box-sizing:border-box !important;max-height:460px !important; }
+  html .libraryPage .itemsContainer.vertical-wrap > .portraitCard { width:50% !important; }
+  html .libraryPage .itemsContainer.padded-right-withalphapicker,
+  html #reactRoot .libraryPage .itemsContainer.vertical-wrap { padding-right:34px !important;padding-left:8px !important;box-sizing:border-box; }
+  html.layout-mobile #moviesTab > .focuscontainer-x { padding:8px 12px !important;gap:3px; }
+  html.layout-mobile #moviesTab > .focuscontainer-x > .paging { flex:0 0 100%;text-align:center; }
+}
+/* The mobile client reserves poster space even though the theme hides that poster. */
+html.layout-mobile .itemDetailPage .infoWrapper {
+  padding:0 !important; box-sizing:border-box !important; min-width:0 !important; max-width:100% !important;
+}
+@media(max-width:800px) {
+  html .itemDetailPage .infoWrapper,
+  html .itemDetailPage .nameContainer,
+  html .itemDetailPage .detailPagePrimaryContent {
+    box-sizing:border-box !important; min-width:0 !important; max-width:100% !important;
+  }
+  html .itemDetailPage .itemName,
+  html .itemDetailPage .tagline,
+  html .itemDetailPage .overview,
+  html .itemDetailPage .itemTags,
+  html .itemDetailPage .itemExternalLinks {
+    white-space:normal !important; overflow-wrap:anywhere; min-width:0;
+  }
+  html .itemDetailPage .itemMiscInfo,
+  html .itemDetailPage .mediaInfoItem-audioLanguage,
+  html .itemDetailPage .audio-languages-container {
+    max-width:100%; flex-wrap:wrap !important;
+  }
+}

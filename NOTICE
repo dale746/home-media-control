@@ -1,0 +1,18 @@
+Home Media Control — development preview
+Copyright (C) 2026 Home Media Control contributors
+
+The custom integration source is provided under GPL-3.0-or-later, without warranty.
+This distribution does not bundle upstream server/client binaries, personal media,
+operating-system images, API credentials, plugins or download-source databases.
+
+Independent projects used by the original setup:
+Jellyfin: https://github.com/jellyfin/jellyfin (GPL-2.0)
+Jellyfin Enhanced: https://github.com/n00bcodr/Jellyfin-Enhanced (GPL-3.0)
+Jellyfin Custom Theme: https://github.com/Kuschel-code/Jellyfin-Custom-Theme (MIT)
+qBittorrent: https://github.com/qbittorrent/qBittorrent
+Seerr: https://github.com/seerr-team/seerr
+Radarr: https://github.com/Radarr/Radarr
+Sonarr: https://github.com/Sonarr/Sonarr
+
+These projects retain their names, authorship and licences. Their mention does not
+imply endorsement, affiliation or a change to their licences.

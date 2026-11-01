@@ -1,0 +1,8 @@
+{
+  "services": {
+    "jellyfin": "http://media.example.invalid:8096",
+    "discovery": null,
+    "status": null
+  },
+  "extraLinks": []
+}

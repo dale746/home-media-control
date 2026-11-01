@@ -1,0 +1,125 @@
+/* Home Media Movies: local cinema overrides for Jellyfin's modern and TV layouts. */
+:root {
+    --primary-r: 229;
+    --primary-g: 9;
+    --primary-b: 20;
+    --primary-accent-color: #e50914;
+    --secondary-accent-color: #e5091426;
+    --primary-background-color: #08080b;
+    --secondary-background-color: #141418;
+    --rounded-cards: 12px;
+    --blur: 6px;
+    --mui-palette-text-primary: #f5f5f7;
+    --mui-palette-text-secondary: #c4c4ce;
+    --mui-palette-background-default: #08080b;
+    --mui-palette-background-paper: #17171e;
+    color-scheme: dark;
+}
+
+html, body, .backgroundContainer {
+    background-color: #08080b !important;
+    color: #f5f5f7 !important;
+}
+
+.MuiTypography-root, .MuiFormLabel-root, .MuiInputBase-root, .MuiInputBase-input,
+.MuiSelect-select, .MuiMenuItem-root, .MuiListItemText-primary,
+.MuiButton-text, .MuiIconButton-root, .MuiChip-root,
+.cardText, .cardText a, .overview, .itemName, .mediaInfo,
+.sectionTitle, .sectionTitle a, .navMenuOption, .listItemBody,
+.inputLabel, .selectLabel, .checkboxLabel, .fieldDescription,
+.detailSectionHeader, .itemTags, .itemGenres {
+    color: #f5f5f7 !important;
+}
+
+.MuiTypography-colorTextSecondary, .MuiFormHelperText-root,
+.MuiListItemText-secondary, .cardText-secondary, .secondaryText,
+.listItemBodyText.secondary, .labelDescription {
+    color: #c4c4ce !important;
+}
+
+.MuiPaper-root:not(.MuiAppBar-root), .MuiInputBase-root,
+.emby-input, .emby-select, .emby-textarea {
+    background-color: #17171e !important;
+    color: #f5f5f7 !important;
+}
+
+.MuiInputBase-input::placeholder, input::placeholder, textarea::placeholder {
+    color: #b0b0be !important;
+    opacity: 1;
+}
+
+.MuiOutlinedInput-notchedOutline { border-color: #656575 !important; }
+.MuiButtonBase-root.Mui-disabled { color: #92929f !important; }
+.MuiLink-root { color: #ff7780 !important; }
+
+body, button, input, select, textarea {
+    font-family: "Segoe UI", Arial, sans-serif;
+}
+
+.skinHeader, .MuiAppBar-root {
+    background: linear-gradient(180deg, rgba(8,8,11,.98), rgba(8,8,11,.9)) !important;
+    border-bottom: 1px solid rgba(255,255,255,.065);
+}
+
+.backdropImage { opacity: .55 !important; }
+.backgroundContainer.withBackdrop {
+    background: linear-gradient(90deg, rgba(8,8,11,.94), rgba(8,8,11,.35)),
+                linear-gradient(0deg, #08080b 0%, transparent 75%) !important;
+}
+
+.MuiButton-containedPrimary, .button-submit, .btnPlay, .raised.emby-button {
+    background-color: #e50914 !important;
+    color: #fff !important;
+    border-radius: 9px !important;
+    font-weight: 700 !important;
+}
+
+.layout-desktop .mainDetailButtons .btnPlay,
+.btnPlay.detailButton.emby-button,
+.mainDetailButtons .btnPlay .detailButton-content,
+.mainDetailButtons .btnPlay .detailButton-content * {
+    color: #fff !important;
+}
+
+.MuiLinearProgress-bar, .itemProgressBarForeground, .mdl-slider-background-lower {
+    background-color: #e50914 !important;
+}
+
+.cardBox, .cardContent, .cardScalable, .MuiCard-root {
+    border-radius: 12px;
+}
+
+.cardBox {
+    box-shadow: 0 9px 28px rgba(0,0,0,.28);
+    transition: transform .18s ease, box-shadow .18s ease;
+}
+
+@media (hover:hover) and (prefers-reduced-motion:no-preference) {
+    .card:hover .cardBox { transform: translateY(-4px); }
+}
+
+.cardText-first, .cardText-first a { font-weight: 650 !important; }
+.cardText-secondary { color: #b8b8c2 !important; }
+.sectionTitle, .MuiTypography-h2 { font-weight: 750 !important; letter-spacing: -.025em; }
+.detailPagePrimaryContainer, .detailPageSecondaryContainer {
+    background-color: rgba(8,8,11,.82) !important;
+}
+.itemName, .nameContainer .itemName, .MuiTypography-h1 {
+    font-weight: 800 !important;
+    letter-spacing: -.04em;
+}
+.overview { font-size: 1.08em; line-height: 1.65; max-width: 75ch; }
+.starIcon, .mediaInfoOfficialRating { color: #f3ca74 !important; }
+
+button:focus-visible, a:focus-visible, .card:focus-visible .cardBox,
+.layout-tv .card:focus .cardBox, .Mui-focusVisible {
+    outline: 3px solid #ffd45b !important;
+    outline-offset: 4px;
+}
+
+.layout-tv .cardText { font-size: 1.06em; }
+.layout-tv .overview { font-size: 1.12em; }
+
+@media (prefers-reduced-motion:reduce) {
+    .cardBox { transition: none; }
+}
