@@ -16,7 +16,7 @@ HERE=pathlib.Path(__file__).resolve().parent
 class WorkerBootstrapTests(unittest.TestCase):
     def setUp(self):
         self.temp=tempfile.TemporaryDirectory();self.addCleanup(self.temp.cleanup)
-        self.root=pathlib.Path(self.temp.name)
+        self.root=pathlib.Path(self.temp.name).resolve()
         tree=ast.parse((HERE/'worker.py').read_text())
         assignment=next(node for node in tree.body if isinstance(node,ast.Assign) and any(isinstance(t,ast.Name) and t.id=='ROOT' for t in node.targets))
         self.assignment=compile(ast.Module(body=[assignment],type_ignores=[]),'worker.py','exec')

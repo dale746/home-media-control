@@ -1,5 +1,5 @@
 """Check the exact public source inventory for common accidental private files."""
-import hashlib,json,pathlib,re,sys
+import argparse,hashlib,json,pathlib,re,sys
 
 ROOT=pathlib.Path(__file__).resolve().parents[1]
 ALLOWED_ROOT={'.gitignore','README.md','LICENSE','NOTICE','SECURITY.md','CONTRIBUTING.md',
@@ -15,7 +15,7 @@ PATTERNS=[
 
 
 def public_files(root=ROOT):
-    for path in sorted(root.rglob('*')):
+    for path in sorted(root.rglob('*'),key=lambda p:p.relative_to(root).as_posix()):
         relative=path.relative_to(root)
         if any(part in {'.git','__pycache__','build'} for part in relative.parts):continue
         if path.is_symlink():raise ValueError('Symlinks are not part of the release')
@@ -37,7 +37,21 @@ def inventory(root=ROOT):
             for p in public_files(root) if p.name!='release-manifest.json']
 
 
+def update_manifests(root=ROOT):
+    source=root/'source-manifest.json'
+    manifest=json.loads(source.read_text())
+    manifest['files']=[entry for entry in inventory(root) if entry['path'].startswith('source/')]
+    manifest['filesExported']=len(manifest['files'])
+    source.write_text(json.dumps(manifest,indent=2)+'\n',encoding='utf-8',newline='\n')
+    release=root/'release-manifest.json'
+    version=json.loads(release.read_text()).get('version','0.1.0-dev') if release.exists() else '0.1.0-dev'
+    release.write_text(json.dumps({'format':1,'version':version,'files':inventory(root)},indent=2)+'\n',encoding='utf-8',newline='\n')
+
+
 def main():
+    parser=argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--update',action='store_true',help='Refresh public manifests after reviewing source changes')
+    if parser.parse_args().update:update_manifests()
     errors=[];files=list(public_files())
     for path in files:
         name=path.relative_to(ROOT).as_posix()

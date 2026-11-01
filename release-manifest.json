@@ -12,19 +12,7 @@
     },
     {
       "path": "CONTRIBUTING.md",
-      "sha256": "178a0dce429432660034beebfd63c9fb0c8a6379b79f45ffce87df25005491eb"
-    },
-    {
-      "path": "docs/ARCHITECTURE.md",
-      "sha256": "70be58eeb61d69627523ade69f9007bbc7362380eb7cd72395217f511a7c77d7"
-    },
-    {
-      "path": "docs/QA-CHECKLIST.md",
-      "sha256": "1e8591bbf6cdef2a508bafe4d33a02027265e395a38fb521a7e5b7e7238aa58f"
-    },
-    {
-      "path": "docs/VERIFICATION.md",
-      "sha256": "fa168c7e6ed630eb410ea717a62ba0cdf5117ef82bca52a063c1b88ef8ea6a75"
+      "sha256": "714e471b8d01e20abd05ddc573e73dea40ac127611afcb69ed4da2a131c716ee"
     },
     {
       "path": "LICENSE",
@@ -41,6 +29,22 @@
     {
       "path": "SECURITY.md",
       "sha256": "0879a9bfb7862acef40ee4ec6aac001f4797db069de54741644da4a6555968a7"
+    },
+    {
+      "path": "docs/ARCHITECTURE.md",
+      "sha256": "70be58eeb61d69627523ade69f9007bbc7362380eb7cd72395217f511a7c77d7"
+    },
+    {
+      "path": "docs/QA-CHECKLIST.md",
+      "sha256": "1e8591bbf6cdef2a508bafe4d33a02027265e395a38fb521a7e5b7e7238aa58f"
+    },
+    {
+      "path": "docs/VERIFICATION.md",
+      "sha256": "fa168c7e6ed630eb410ea717a62ba0cdf5117ef82bca52a063c1b88ef8ea6a75"
+    },
+    {
+      "path": "source-manifest.json",
+      "sha256": "50ffb808cacda07f2824bc6315e3946597ad1ec12ac55f62f135c05864c0becc"
     },
     {
       "path": "source/appearance/hmc-cinema.css",
@@ -148,7 +152,7 @@
     },
     {
       "path": "source/pc-downloads/test_long_paths.py",
-      "sha256": "37d92dc6e67ade0f3ebfe05e80f701be8db55a0c5aa19b28ee92a9d1f8b4bbd3"
+      "sha256": "a3b0d13d48622d2d26a0926b3475692a7477c491d70b3b7308533ffb71735294"
     },
     {
       "path": "source/pc-downloads/test_manual_controls.py",
@@ -168,11 +172,11 @@
     },
     {
       "path": "source/pc-downloads/test_worker_bootstrap.py",
-      "sha256": "2ad85d2aa09d75b39190bf36e74bf34dab62a00a29d43db40e9c91d63003b5e3"
+      "sha256": "f827c74f7fdb78521a848a21a663af25522cccb690498840e3be5954af95c5f0"
     },
     {
       "path": "source/pc-downloads/test_worker_recovery.py",
-      "sha256": "3d76e073d1162c6b5d9c06f12edc788d814eed1ef64b29f0dfbff0f5645353c8"
+      "sha256": "7e0adafdaf8ca9e1eb561ab015d0c6ddea24a2bd005a6a6b808a70f027fcb6ae"
     },
     {
       "path": "source/pc-downloads/tunnel_proxy.py",
@@ -304,7 +308,7 @@
     },
     {
       "path": "source/status-dashboard/test_runtime_bootstrap.py",
-      "sha256": "806fba93f7e69de48e2ebc8e89f52a4524d604b097b177c3b6f0cd548dc6974f"
+      "sha256": "712668b1308e71dc27f8c9fb7dab5ef0267157909ec8387df8cde090e7410415"
     },
     {
       "path": "source/status-dashboard/test_server_power.py",
@@ -343,16 +347,12 @@
       "sha256": "d20370f71b098378c173986fc6c447302e53388f283112bcfe6b5ce23e15f67c"
     },
     {
-      "path": "source-manifest.json",
-      "sha256": "404488fc95559b66926793cde8968a8487599339c7008a50347f6c4438dfb5ab"
-    },
-    {
       "path": "tools/build_web.py",
       "sha256": "40895c91eb5af7a27cb8f531197454ca57cfc3a18f4b8f5fff1792929fa9b35f"
     },
     {
       "path": "tools/check_release.py",
-      "sha256": "59df846b3f7029c5d7896f4753ae2bca14a20510cb0e4103a30fd4befd8c974c"
+      "sha256": "b5f8c903145bd8da6aa1fb09bfa183a0c5a89b030ee6cea348fac20bfcf855ac"
     },
     {
       "path": "tools/install_web.py",
@@ -368,7 +368,7 @@
     },
     {
       "path": "tools/test_check_release.py",
-      "sha256": "b06bdd3053f210bba312c8d6e248b95c1401ecba68b377c6b898aa2ff2d2f064"
+      "sha256": "d36ac7443caad37a5f602b7d7af5302275b63cdabc3005c08cc2d839b426e4ef"
     },
     {
       "path": "tools/test_install_web.py",

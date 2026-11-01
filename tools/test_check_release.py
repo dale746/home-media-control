@@ -1,5 +1,5 @@
-import unittest
-from check_release import findings
+import pathlib,tempfile,unittest
+from check_release import findings,inventory
 
 
 class ReleaseChecks(unittest.TestCase):
@@ -14,6 +14,12 @@ class ReleaseChecks(unittest.TestCase):
     def test_rejects_unexpected_runtime_and_binary_files(self):
         for name in ('settings.json','source/settings.json','source/movie.mp4','private/anything.json'):
             self.assertTrue(findings(name,''))
+
+    def test_inventory_uses_the_same_case_sensitive_order_on_all_platforms(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root=pathlib.Path(directory)
+            for name in ('alpha.md','Zebra.md','Bravo.md'):(root/name).write_text(name)
+            self.assertEqual([entry['path'] for entry in inventory(root)],['Bravo.md','Zebra.md','alpha.md'])
 
 
 if __name__=='__main__':unittest.main()

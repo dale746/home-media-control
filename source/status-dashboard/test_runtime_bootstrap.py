@@ -25,7 +25,7 @@ def assignment_prefix(path,stop):
 class RuntimeBootstrapTests(unittest.TestCase):
     def setUp(self):
         self.temp=tempfile.TemporaryDirectory();self.addCleanup(self.temp.cleanup)
-        self.root=pathlib.Path(self.temp.name)
+        self.root=pathlib.Path(self.temp.name).resolve()
         self.server_prefix=assignment_prefix(HERE/'server.py',lambda n:isinstance(n,ast.Import) and any(a.name=='worker' for a in n.names))
         worker_path=HERE.parent/'pc-downloads/worker.py'
         worker_tree=ast.parse(worker_path.read_text())

@@ -14,7 +14,7 @@ from windows_paths import io_path, resolved_path
 class LongPathTests(unittest.TestCase):
     def test_complete_long_file_is_recognized_and_only_verified_copy_removed(self):
         with tempfile.TemporaryDirectory() as directory:
-            root = pathlib.Path(directory)
+            root = pathlib.Path(directory).resolve()
             folder = root / 'torrents/movies' / ('Folder' * 20)
             folder.mkdir(parents=True)
             path = folder / (('Film' * 30) + '.mp4')

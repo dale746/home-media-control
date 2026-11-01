@@ -55,7 +55,7 @@ class RecoveryTests(unittest.TestCase):
 
     def test_copy_stops_before_pi_storage_reserve_is_crossed(self):
         with tempfile.TemporaryDirectory() as directory:
-            root=pathlib.Path(directory)
+            root=pathlib.Path(directory).resolve()
             folder=root/'torrents/movies';folder.mkdir(parents=True)
             (folder/'film.mp4').write_bytes(b'test')
             item=dict(torrent('a'),save_path=str(folder))
@@ -92,7 +92,7 @@ class RecoveryTests(unittest.TestCase):
 
     def test_one_bad_completed_job_does_not_block_other_jobs(self):
         with tempfile.TemporaryDirectory() as directory:
-            root = pathlib.Path(directory)
+            root = pathlib.Path(directory).resolve()
             queue = FakeQueue([torrent('a'), torrent('b')])
             attempted = []
 
@@ -110,7 +110,7 @@ class RecoveryTests(unittest.TestCase):
 
     def test_completed_files_can_copy_from_either_approved_drive(self):
         with tempfile.TemporaryDirectory() as directory:
-            root = pathlib.Path(directory)
+            root = pathlib.Path(directory).resolve()
             roots = [root / 'old', root / 'new']
             qb = types.SimpleNamespace(request=lambda *args, **kwargs: [{'name': 'film.mp4', 'size': 4, 'progress': 1, 'priority': 1}])
             with patch.object(worker, 'CONFIG', dict(worker.CONFIG, data=str(roots[1]), source_roots=list(map(str, roots)))):
@@ -125,7 +125,7 @@ class RecoveryTests(unittest.TestCase):
 
     def test_old_source_drive_reserve_is_enforced_while_new_drive_has_space(self):
         with tempfile.TemporaryDirectory() as directory:
-            root = pathlib.Path(directory)
+            root = pathlib.Path(directory).resolve()
             old, new = root / 'old', root / 'new'
             job = torrent('a', complete=False)
             job['save_path'] = str(old / 'torrents/movies')
@@ -140,7 +140,7 @@ class RecoveryTests(unittest.TestCase):
 
     def test_storage_hold_stops_downloads_but_allows_completed_copy(self):
         with tempfile.TemporaryDirectory() as directory:
-            root = pathlib.Path(directory)
+            root = pathlib.Path(directory).resolve()
             queue = FakeQueue([torrent('a', complete=False), torrent('b')])
             self.run_worker(root, queue, lambda qb, item: 'ready', free_gib=90)
             self.assertEqual(queue.stopped, ['a' * 40])

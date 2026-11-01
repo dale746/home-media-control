@@ -108,7 +108,7 @@
     },
     {
       "path": "source/pc-downloads/test_long_paths.py",
-      "sha256": "37d92dc6e67ade0f3ebfe05e80f701be8db55a0c5aa19b28ee92a9d1f8b4bbd3"
+      "sha256": "a3b0d13d48622d2d26a0926b3475692a7477c491d70b3b7308533ffb71735294"
     },
     {
       "path": "source/pc-downloads/test_manual_controls.py",
@@ -128,11 +128,11 @@
     },
     {
       "path": "source/pc-downloads/test_worker_bootstrap.py",
-      "sha256": "2ad85d2aa09d75b39190bf36e74bf34dab62a00a29d43db40e9c91d63003b5e3"
+      "sha256": "f827c74f7fdb78521a848a21a663af25522cccb690498840e3be5954af95c5f0"
     },
     {
       "path": "source/pc-downloads/test_worker_recovery.py",
-      "sha256": "3d76e073d1162c6b5d9c06f12edc788d814eed1ef64b29f0dfbff0f5645353c8"
+      "sha256": "7e0adafdaf8ca9e1eb561ab015d0c6ddea24a2bd005a6a6b808a70f027fcb6ae"
     },
     {
       "path": "source/pc-downloads/tunnel_proxy.py",
@@ -264,7 +264,7 @@
     },
     {
       "path": "source/status-dashboard/test_runtime_bootstrap.py",
-      "sha256": "806fba93f7e69de48e2ebc8e89f52a4524d604b097b177c3b6f0cd548dc6974f"
+      "sha256": "712668b1308e71dc27f8c9fb7dab5ef0267157909ec8387df8cde090e7410415"
     },
     {
       "path": "source/status-dashboard/test_server_power.py",
